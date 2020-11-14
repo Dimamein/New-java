@@ -5,7 +5,7 @@ public class Main {
 
     public static void main (String[] args) {
         Scanner scanner = new Scanner(System.in);
-        int i = scanner.nextInt();
+        int i;
 
         do {
             System.out.println("Choose:");
@@ -13,6 +13,8 @@ public class Main {
             System.out.println("2. Obliczenie pola kwadrat");
             System.out.println("3. Obliczenie pola trójkąta");
             System.out.println("0. Zakończ1 program");
+            System.out.println();
+            i = scanner.nextInt();
             switch (i) {
                 case 1:
                     System.out.println("Podaj bok prostokąta:");
@@ -23,19 +25,18 @@ public class Main {
                     break;
                 case 2:
                     System.out.println("Podaj bok kwadrata:");
-                    int c = scanner.nextInt();
-                    System.out.println("Podaj drugi bok kwadrata:");
-                    int d = scanner.nextInt();
-                    System.out.println("Pole kwadrat wynosi:" + c*d);
+                    int c = scanner.nextInt();;
+                    System.out.println("Pole kwadrat wynosi:" + (c*c));
                     break;
                 case 3:
                     System.out.println("Podaj bok trójkąta:");
-                    int e = scanner.nextInt();
+                    int n = scanner.nextInt();
                     System.out.println("Podaj wysokość trójkąta:");
-                    int j = scanner.nextInt();
-                    System.out.println("Pole trójkąta wynosi:" + e*j);
+                    int h = scanner.nextInt();
+                    System.out.println("Pole trójkąta wynosi:" + (n * h /2.0));
                     break;
                 case 0:
+                    System.exit(0);
                     break;
             }
         } while (i != 0); {
